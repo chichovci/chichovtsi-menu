@@ -192,31 +192,27 @@ body{
 } 
 
 /* ============================================
-   MOBILE FIX: 3 колони за категориите
+   MOBILE FIX: 3 колони за категориите (ВСИЧКИ ЕКРАНИ)
    ============================================ */
 
 .tabs {
   margin: 6px 0 10px !important;
   gap: 6px !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
 }
 
 .tab {
-  padding: 10px 12px !important;    /* малко по-малък padding за 3 колони */
+  flex: 1 1 calc(33.333% - 4px) !important;  /* 3 колони ВИНАГИ */
+  padding: 8px 10px !important;
   font-size: 13px !important;
   line-height: 1.15 !important;
   min-height: unset !important;
   height: auto !important;
-  text-align: center;               /* центрира текста */
+  text-align: center !important;
+  max-width: calc(33.333% - 4px) !important;  /* ограничава ширината */
 }
 
-/* 3 колони за mobile екрани */
-@media (max-width: 520px) {
-  .tab {
-    flex: 1 1 calc(33.333% - 4px);  /* 3 равни колони */
-    padding: 8px 10px !important;   /* още по-компактен за mobile */
-    font-size: 12px !important;
-  }
-} 
 
 /* --- waiter overlay scroll fix (only) --- */
 .modal{display:flex;flex-direction:column;max-height:86vh;}
