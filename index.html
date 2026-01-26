@@ -218,28 +218,76 @@ body{
   }
 }
 
-/* Mobile: Horizontal scroll */
-@media (max-width: 520px) {
+/* ============================================
+   FINAL: 2 реда desktop, horizontal scroll mobile
+   ============================================ */
+
+.tabs {
+  margin: 6px 0 10px !important;
+  gap: 6px !important;
+  position: relative !important;
+}
+
+.tab {
+  padding: 10px 14px !important;
+  font-size: 13px !important;
+  line-height: 1.15 !important;
+  min-height: unset !important;
+  height: auto !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+}
+
+/* Desktop: Multi-column layout - 2 реда */
+@media (min-width: 521px) {
   .tabs {
     display: flex !important;
-    flex-wrap: nowrap !important;     /* всичко на 1 ред */
-    overflow-x: auto !important;      /* horizontal scroll */
-    overflow-y: hidden !important;
-    -webkit-overflow-scrolling: touch !important;
-    scrollbar-width: none !important; /* скрива scrollbar */
-    padding-bottom: 4px !important;   /* малко spacing */
-  }
-  
-  .tabs::-webkit-scrollbar {
-    display: none !important;         /* скрива scrollbar Chrome/Safari */
+    flex-wrap: wrap !important;
+    max-height: 88px !important;  /* ограничава до 2 реда (~44px × 2) */
+    overflow: hidden !important;
+    align-content: flex-start !important;
   }
   
   .tab {
-    flex-shrink: 0 !important;        /* бутоните НЕ се смаляват */
-    padding: 9px 16px !important;     /* леко по-голям padding */
+    flex: 0 0 auto !important;  /* автоматична ширина според текста */
+    min-width: fit-content !important;
   }
 }
 
+/* Mobile: Horizontal scroll с градиент */
+@media (max-width: 520px) {
+  .tabs {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    padding-bottom: 4px !important;
+  }
+  
+  .tabs::-webkit-scrollbar {
+    display: none !important;
+  }
+  
+  .tab {
+    flex-shrink: 0 !important;
+    padding: 9px 16px !important;
+  }
+  
+  /* Fade градиент - индикация за още категории */
+  .tabs::after {
+    content: '' !important;
+    position: absolute !important;
+    right: 0 !important;
+    top: 0 !important;
+    bottom: 4px !important;
+    width: 50px !important;
+    background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.9) 50%, white) !important;
+    pointer-events: none !important;
+    z-index: 10 !important;
+  }
+} 
 
 /* --- waiter overlay scroll fix (only) --- */
 .modal{display:flex;flex-direction:column;max-height:86vh;}
