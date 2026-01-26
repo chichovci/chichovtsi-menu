@@ -195,17 +195,24 @@ body{
    MOBILE FIX: Намаляване височина на категориите
    ============================================ */
 
-.row.cats {
-  padding: 6px 0 !important;      /* намалява контейнера */
-  gap: 8px !important;            /* разстояние между бутоните */
+.tabs {
+  margin: 6px 0 10px !important;
+  gap: 6px !important;
 }
 
-.chip {
-  padding: 10px 16px !important;  /* ← намалява от default ~16-20px */
-  font-size: 14px !important;     /* леко по-малък шрифт */
-  line-height: 1.2 !important;    /* стяга височината на текста */
-  min-height: unset !important;   /* премахва минимална височина */
-  height: auto !important;        /* позволява auto височина */
+.tab {
+  padding: 10px 16px !important;
+  font-size: 14px !important;
+  line-height: 1.2 !important;
+  min-height: unset !important;
+  height: auto !important;
+}
+
+@media (max-width: 480px) {
+  .tab {
+    padding: 8px 14px !important;
+    font-size: 13px !important;
+  }
 } 
 
 /* --- waiter overlay scroll fix (only) --- */
