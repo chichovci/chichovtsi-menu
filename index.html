@@ -192,7 +192,7 @@ body{
 } 
 
 /* ============================================
-   MOBILE FIX: Намаляване височина на категориите
+   MOBILE FIX: 3 колони за категориите
    ============================================ */
 
 .tabs {
@@ -201,17 +201,20 @@ body{
 }
 
 .tab {
-  padding: 10px 16px !important;
-  font-size: 14px !important;
-  line-height: 1.2 !important;
+  padding: 10px 12px !important;    /* малко по-малък padding за 3 колони */
+  font-size: 13px !important;
+  line-height: 1.15 !important;
   min-height: unset !important;
   height: auto !important;
+  text-align: center;               /* центрира текста */
 }
 
-@media (max-width: 480px) {
+/* 3 колони за mobile екрани */
+@media (max-width: 520px) {
   .tab {
-    padding: 8px 14px !important;
-    font-size: 13px !important;
+    flex: 1 1 calc(33.333% - 4px);  /* 3 равни колони */
+    padding: 8px 10px !important;   /* още по-компактен за mobile */
+    font-size: 12px !important;
   }
 } 
 
