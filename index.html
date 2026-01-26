@@ -331,7 +331,47 @@ css/* ============================================
   }
 }
 
-/* Mobile: Horizontal scroll с по-малки бутони */
+/* ============================================
+   FINAL: Auto-width бутони на mobile
+   ============================================ */
+
+.tabs {
+  margin: 6px 0 10px !important;
+  gap: 4px !important;
+  position: relative !important;
+}
+
+.tab {
+  padding: 6px 10px !important;
+  font-size: 13px !important;
+  line-height: 1.2 !important;
+  min-height: unset !important;
+  height: auto !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+  border-radius: 6px !important;
+}
+
+/* Desktop: Multi-column, 2 реда */
+@media (min-width: 521px) {
+  .tabs {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    max-height: 64px !important;
+    overflow: hidden !important;
+    align-content: flex-start !important;
+  }
+  
+  .tab {
+    flex: 0 0 auto !important;  /* auto-width */
+    padding: 5px 8px !important;
+    width: auto !important;     /* ← форсира auto width */
+    min-width: auto !important;
+    max-width: none !important;
+  }
+}
+
+/* Mobile: Horizontal scroll - auto width */
 @media (max-width: 520px) {
   .tabs {
     display: flex !important;
@@ -341,7 +381,7 @@ css/* ============================================
     -webkit-overflow-scrolling: touch !important;
     scrollbar-width: none !important;
     padding-bottom: 4px !important;
-    gap: 3px !important;  /* още по-малко разстояние */
+    gap: 3px !important;
   }
   
   .tabs::-webkit-scrollbar {
@@ -349,10 +389,14 @@ css/* ============================================
   }
   
   .tab {
+    flex: 0 0 auto !important;     /* ← НЕ expand */
     flex-shrink: 0 !important;
-    padding: 6px 10px !important;  /* ← компактен padding */
-    font-size: 12px !important;    /* ← по-малък шрифт */
+    padding: 6px 10px !important;
+    font-size: 12px !important;
     border-radius: 5px !important;
+    width: auto !important;        /* ← форсира auto width */
+    min-width: auto !important;    /* ← премахва min-width */
+    max-width: none !important;    /* ← премахва max-width */
   }
   
   /* Fade градиент вдясно */
