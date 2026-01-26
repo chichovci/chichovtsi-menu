@@ -190,16 +190,22 @@ body{
 @media (max-width:520px){
   .tab{flex:1 1 calc(50% - 8px); text-align:center}
 } 
-/* MOBILE FIX - най-долу */
+
+/* ============================================
+   MOBILE FIX: Намаляване височина на категориите
+   ============================================ */
+
 .row.cats {
-  padding: 8px 0 !important;
-  gap: 6px !important;
+  padding: 6px 0 !important;      /* намалява контейнера */
+  gap: 8px !important;            /* разстояние между бутоните */
 }
 
 .chip {
-  padding: 8px 12px !important;
-  font-size: 13px !important;
-  line-height: 1 !important;
+  padding: 10px 16px !important;  /* ← намалява от default ~16-20px */
+  font-size: 14px !important;     /* леко по-малък шрифт */
+  line-height: 1.2 !important;    /* стяга височината на текста */
+  min-height: unset !important;   /* премахва минимална височина */
+  height: auto !important;        /* позволява auto височина */
 } 
 
 /* --- waiter overlay scroll fix (only) --- */
