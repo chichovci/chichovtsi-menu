@@ -392,6 +392,27 @@ css/* ============================================
   border-radius: 6px !important;
 }
 
+/* ============================================
+   FINAL: 2 реда desktop, 3 реда mobile - компактни бутони
+   ============================================ */
+
+.tabs {
+  margin: 6px 0 10px !important;
+  gap: 4px !important;
+  position: relative !important;
+}
+
+.tab {
+  padding: 6px 10px !important;
+  font-size: 13px !important;
+  line-height: 1.2 !important;
+  min-height: unset !important;
+  height: auto !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+  border-radius: 6px !important;
+}
+
 /* Desktop: Multi-column, 2 реда */
 @media (min-width: 521px) {
   .tabs {
@@ -411,24 +432,26 @@ css/* ============================================
   }
 }
 
-/* Mobile: 3 реда, flex wrap */
+/* Mobile: 3 реда, много компактни бутони */
 @media (max-width: 520px) {
   .tabs {
     display: flex !important;
-    flex-wrap: wrap !important;        /* ← wrap вместо nowrap */
-    overflow: visible !important;      /* ← visible вместо scroll */
+    flex-wrap: wrap !important;
+    overflow: visible !important;
     gap: 3px !important;
-    max-height: 96px !important;       /* ~32px × 3 реда */
+    max-height: 90px !important;  /* ~30px × 3 реда */
   }
   
   .tab {
     flex: 0 0 auto !important;
-    padding: 6px 10px !important;
-    font-size: 12px !important;
-    border-radius: 5px !important;
+    padding: 5px 8px !important;   /* ← по-малък padding */
+    font-size: 11px !important;    /* ← по-малък шрифт */
+    line-height: 1.2 !important;
+    border-radius: 4px !important;
     width: auto !important;
     min-width: auto !important;
     max-width: none !important;
+    font-weight: 650 !important;   /* леко по-bold за четимост */
   }
 }
 
