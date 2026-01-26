@@ -192,25 +192,52 @@ body{
 } 
 
 /* ============================================
-   MOBILE FIX: 3 колони за категориите (ВСИЧКИ ЕКРАНИ)
+   MOBILE FIX: Horizontal scroll на телефон, 3 колони на desktop
    ============================================ */
 
 .tabs {
   margin: 6px 0 10px !important;
   gap: 6px !important;
-  display: flex !important;
-  flex-wrap: wrap !important;
 }
 
 .tab {
-  flex: 1 1 calc(33.333% - 4px) !important;  /* 3 колони ВИНАГИ */
-  padding: 8px 10px !important;
+  padding: 10px 14px !important;
   font-size: 13px !important;
   line-height: 1.15 !important;
   min-height: unset !important;
   height: auto !important;
   text-align: center !important;
-  max-width: calc(33.333% - 4px) !important;  /* ограничава ширината */
+  white-space: nowrap !important;  /* текстът НЕ се пренася на нов ред */
+}
+
+/* Desktop: 3 колони grid */
+@media (min-width: 521px) {
+  .tabs {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+/* Mobile: Horizontal scroll */
+@media (max-width: 520px) {
+  .tabs {
+    display: flex !important;
+    flex-wrap: nowrap !important;     /* всичко на 1 ред */
+    overflow-x: auto !important;      /* horizontal scroll */
+    overflow-y: hidden !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important; /* скрива scrollbar */
+    padding-bottom: 4px !important;   /* малко spacing */
+  }
+  
+  .tabs::-webkit-scrollbar {
+    display: none !important;         /* скрива scrollbar Chrome/Safari */
+  }
+  
+  .tab {
+    flex-shrink: 0 !important;        /* бутоните НЕ се смаляват */
+    padding: 9px 16px !important;     /* леко по-голям padding */
+  }
 }
 
 
