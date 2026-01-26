@@ -12,6 +12,7 @@
   --chip:#111827;
   --chipText:#ffffff;
   --chipBorder:#e5e7eb;
+  --accent:#2563eb;
 }
 *{box-sizing:border-box}
 body{
@@ -59,7 +60,6 @@ body{
 }
 .code{font-weight:800;font-size:12px;color:var(--muted)}
 .title{font-weight:700; font-size:15px}
-/* Canonical spacing fix */
 .desc{
   color:var(--text);
   font-size:13px;
@@ -210,6 +210,24 @@ body{
   text-align: center !important;
   white-space: nowrap !important;
   border-radius: 6px !important;
+  border: 1.5px solid #cbd5e1 !important;
+  background: #ffffff !important;
+  color: #475569 !important;
+  transition: all 0.2s ease !important;
+}
+
+.tab:hover {
+  border-color: var(--accent) !important;
+  color: var(--accent) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.1) !important;
+}
+
+.tab.active {
+  background: var(--accent) !important;
+  color: #ffffff !important;
+  border-color: var(--accent) !important;
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.25) !important;
 }
 
 /* Desktop: Multi-column, 2 реда */
@@ -256,16 +274,89 @@ body{
     min-width: auto !important;
     max-width: none !important;
     font-weight: 650 !important;
+  }
+  
+  .tab:not(.active) {
     background: #ffffff !important;
     box-shadow: 0 1px 2px rgba(0,0,0,0.04) !important;
   }
-  
-  .tab.active {
-    background: var(--chip) !important;
-    color: var(--chipText) !important;
-    border-color: var(--chip) !important;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
-  }
+}
+
+/* ============================================
+   Бутони на реда с цената - компактни без цветове
+   ============================================ */
+
+.actions {
+  position: static !important;
+  top: auto !important;
+  right: auto !important;
+  margin-top: 0 !important;
+  gap: 6px !important;
+}
+
+.meta {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  width: 100% !important;
+  margin-top: 8px !important;
+}
+
+.item {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.waiter {
+  order: 1;
+}
+
+.desc {
+  order: 2;
+}
+
+.meta {
+  order: 3;
+}
+
+/* Компактни бутони - само сив контур */
+.iconbtn {
+  width: 28px !important;
+  height: 28px !important;
+  border-radius: 6px !important;
+  border: 1px solid #d1d5db !important;
+  background: #ffffff !important;
+  font-weight: 900 !important;
+  font-size: 16px !important;
+  cursor: pointer !important;
+  transition: all 0.15s ease !important;
+  color: #374151 !important;
+}
+
+.iconbtn:hover {
+  border-color: #9ca3af !important;
+  background: #f9fafb !important;
+}
+
+.iconbtn:active {
+  transform: scale(0.95) !important;
+  background: #f3f4f6 !important;
+}
+
+/* Counter badge - кръгъл */
+.count {
+  min-width: 24px !important;
+  width: auto !important;
+  height: 24px !important;
+  border-radius: 50% !important;
+  background: #111827 !important;
+  color: #ffffff !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 12px !important;
+  font-weight: 800 !important;
+  padding: 0 6px !important;
 }
 
 </style>
@@ -347,6 +438,7 @@ function renderList(){
     minus.className = "iconbtn";
     minus.textContent = "−";
     minus.onclick = () => dec(it.code);
+    minus.style.display = qty > 0 ? "flex" : "none";
 
     const plus = document.createElement("button");
     plus.className = "iconbtn";
@@ -366,7 +458,6 @@ function renderList(){
     topline.className = "waiter";
     topline.innerHTML = `<span class="code">${it.code}</span><span class="title">${it.name}</span>`;
 
-    wrap.appendChild(actions);
     wrap.appendChild(topline);
 
     if(it.desc){
@@ -378,7 +469,16 @@ function renderList(){
 
     const meta = document.createElement("div");
     meta.className = "meta";
-    meta.innerHTML = `<span class="price">€${it.eur} / ${it.bgn} лв</span><span class="weight">${it.weight}</span>`;
+    
+    const priceWeight = document.createElement("div");
+    priceWeight.style.display = "flex";
+    priceWeight.style.gap = "8px";
+    priceWeight.style.alignItems = "baseline";
+    priceWeight.innerHTML = `<span class="price">€${it.eur} / ${it.bgn} лв</span><span class="weight">${it.weight}</span>`;
+    
+    meta.appendChild(priceWeight);
+    meta.appendChild(actions);
+
     wrap.appendChild(meta);
 
     list.appendChild(wrap);
