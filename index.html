@@ -48,7 +48,7 @@ body{
 }
 .item{
   padding:12px 0;
-  border-bottom:1px solid var(--line);
+  border-bottom:1px solid #d1d5db;  /* ← по-тъмно сиво */
   position:relative;
 }
 .waiter{
@@ -386,13 +386,20 @@ body{
     <div class="modbody" id="orderBody"></div>
   </div>
 </div>
-
 <script src="data-bg.js"></script>
+<script src="data-en.js"></script>
 <script>
-const data = window.MENU_BG;
+let currentLang = "bg";
+let data = window.MENU_BG;
 let activeCat = data.categories[0]?.id || "";
-let lang = "bg";
 const order = new Map();
+
+function switchLanguage(lang) {
+  currentLang = lang;
+  data = lang === "bg" ? window.MENU_BG : window.MENU_EN;
+  activeCat = data.categories[0]?.id || "";
+  render();
+} 
 
 function getActiveCategory(){
   return data.categories.find(c => c.id === activeCat) || data.categories[0];
@@ -556,8 +563,8 @@ document.getElementById("overlay").onclick = (e) => {
   if(e.target.id==="overlay") document.getElementById("overlay").style.display = "none";
 };
 
-document.getElementById("lang-bg").onclick = () => { lang="bg"; alert("Език: Български"); };
-document.getElementById("lang-en").onclick = () => { alert("EN ще добавим след като заключим BG."); };
+document.getElementById("lang-bg").onclick = () => { switchLanguage("bg"); };
+document.getElementById("lang-en").onclick = () => { switchLanguage("en"); };
 
 render();
 </script>
