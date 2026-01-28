@@ -1393,7 +1393,7 @@ window.MENU_BG = {
     },
     {
       "id": "kum_qstiqta",
-      "label": "Към менюто",
+      "label": "Към ястията",
       "items": [
         {
           "code": "KJ01",
