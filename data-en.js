@@ -2,7 +2,7 @@ window.MENU_EN = {
   categories: [
   {
       id: "specials",
-      label: "Specials",
+      label: "SPECIALS",
       items: [
         {code: "S01", name: "Winter Tomato", desc: "roasted tomato, katak (Bulgarian dairy spread), olives, walnuts, wild garlic pesto", eur: 7.11, bgn: 13.90, weight: "400 g"},
         {code: "S02", name: "Fermented Vegetables", desc: "traditional lacto-fermented mixed vegetables", eur: 5.22, bgn: 10.20, weight: "300 g"},
@@ -24,7 +24,7 @@ window.MENU_EN = {
     },
 	{
       id: "fish",
-      label: "Fish & Seafood",
+      label: "FISH & SEAFOOD",
       items: [
         {code: "F01", name: "Tarama", desc: "classic fish roe spread with red onion and flatbread", eur: 5.57, bgn: 10.90, weight: "180/100 g"},
         {code: "F02", name: "Tuna Salad", desc: "lettuce, tomatoes, canned tuna, sweet corn and lemon", eur: 7.10, bgn: 13.90, weight: "400 g"},
@@ -53,7 +53,7 @@ window.MENU_EN = {
     },
 	{
       id: "salads",
-      label: "Salads",
+      label: "SALADS",
       items: [
         {code: "SA01", name: "Shopska Salad", desc: "tomatoes, cucumbers, white cheese", eur: 5.37, bgn: 10.50, weight: "400 g"},
         {code: "SA02", name: "Tomato Salad", desc: "fresh tomatoes", eur: 5.01, bgn: 9.80, weight: "330 g"},
@@ -91,7 +91,7 @@ window.MENU_EN = {
     },
 	{
       id: "appetizers",
-      label: "Spreads & Meze",
+      label: "APPETIZERS",
       items: [
         {code: "RZ01", name: "Tzatziki", desc: "", eur: 5.06, bgn: 9.90, weight: "200 g"},
         {code: "RZ02", name: "Tyrokafteri", desc: "spicy cheese spread with chili peppers", eur: 5.06, bgn: 9.90, weight: "150 g"},
@@ -107,7 +107,7 @@ window.MENU_EN = {
     },
 	{
       id: "starters-veg",
-      label: "Meat-Free Starters",
+      label: "MEATLESS STARTERS",
       items: [
         {code: "PB01", name: "Cheese-Stuffed Fried Peppers", desc: "", eur: 6.08, bgn: 11.90, weight: "2 pcs"},
         {code: "PB02", name: "Peppers in Tomato Sauce", desc: "", eur: 6.60, bgn: 12.90, weight: "400 g"},
@@ -138,7 +138,7 @@ window.MENU_EN = {
     },
 	{
       id: "starters-meat",
-      label: "Meat Starters",
+      label: "STARTERS WITH MEAT",
       items: [
         {code: "PM01", name: "Stuffed Cabbage Rolls", desc: "", eur: 6.14, bgn: 12.60, weight: "250 g"},
         {code: "PM02", name: "Stuffed Vine Leaves", desc: "", eur: 6.14, bgn: 12.60, weight: "250 g"},
@@ -183,7 +183,7 @@ window.MENU_EN = {
     },
 	{
       id: "mains",
-      label: "Main Courses",
+      label: "MAINS",
       items: [
         {code: "M01", name: "Chicken Fillet with Garlic and White Wine", desc: "chicken fillet, garlic, white wine and sautéed potatoes", eur: 7.57, bgn: 14.80, weight: "250 g"},
         {code: "M02", name: "Baked Chicken Fillet with Tomatoes and Cheese", desc: "chicken fillet, tomatoes, yellow cheese and basil", eur: 7.67, bgn: 15.00, weight: "350 g"},
@@ -208,7 +208,7 @@ window.MENU_EN = {
     },
 	{
       id: "grill",
-      label: "Grill",
+      label: "GRILL",
       items: [
         {code: "G01", name: "Retro Mixed Meatballs", desc: "three grilled meatballs with pork, lamb and beef, served with fried potatoes, seasonal salad and homemade lyutenitsa", eur: 8.13, bgn: 15.90, weight: "300/250 g"},
         {code: "G02", name: "Grilled Pork Belly", desc: "grilled pork belly slices with homemade lyutenitsa, seasonal salad and hot chili pepper", eur: 8.08, bgn: 15.80, weight: "250/250 g"},
@@ -224,7 +224,7 @@ window.MENU_EN = {
     },
 	{
       id: "sides",
-      label: "Sides, Bread & Add-ons",
+      label: "SIDES & EXTRAS",
       items: [
         {code: "KJ01", name: "Tomato & Cucumber Side", desc: "", eur: 2.20, bgn: 4.30, weight: "160 g"},
         {code: "KJ02", name: "Boiled Potatoes with Onion (Side)", desc: "", eur: 2.05, bgn: 4.00, weight: "250 g"},
@@ -253,7 +253,7 @@ window.MENU_EN = {
     },
 	{
       id: "desserts",
-      label: "Desserts",
+      label: "DESSERTS",
       items: [
         {code: "D01", name: "Ice Cream", desc: "1 serving", eur: 2.91, bgn: 5.70, weight: "150 g"},
         {code: "D02", name: "Homemade Ice Creams – Assorted Flavors", desc: "house-made ice creams, various flavors", eur: 3.74, bgn: 6.60, weight: "150 g"},
@@ -266,7 +266,7 @@ window.MENU_EN = {
     },
 	{
       id: "soft-drinks",
-      label: "Soft Drinks",
+      label: "SOFT DRINKS",
       items: [
         {code: "BN01", name: "Coca-Cola", desc: "", eur: 2.05, bgn: 4.00, weight: "250 ml"},
         {code: "BN02", name: "Fanta", desc: "", eur: 2.05, bgn: 4.00, weight: "250 ml"},
@@ -291,7 +291,7 @@ window.MENU_EN = {
     },
 	{
       id: "alcohol",
-      label: "Alcohol",
+      label: "ALCOHOLIC DRINKS",
       items: [
         {code: "AN01", name: "Peshterska Rakia", desc: "", eur: 2.56, bgn: 5.00, weight: "50 ml"},
         {code: "AN02", name: "Karnobatska Rakia", desc: "", eur: 2.56, bgn: 5.00, weight: "50 ml"},
@@ -343,7 +343,7 @@ window.MENU_EN = {
     },
 	{
       id: "beer",
-      label: "Beer",
+      label: "BEER",
       items: [
         {code: "BV01", name: "Kamenitza Draft", desc: "", eur: 2.20, bgn: 4.30, weight: "330 ml"},
         {code: "BV02", name: "Kamenitza Draft", desc: "", eur: 2.66, bgn: 5.20, weight: "500 ml"},
@@ -361,7 +361,7 @@ window.MENU_EN = {
     },
 	{
       id: "wine",
-      label: "Wine",
+      label: "WINE",
       items: [
         {code: "WN01", name: "Angel's Estate Sauvignon Blanc", desc: "white wines (bottle)", eur: 14.31, bgn: 28.00, weight: "750 ml"},
         {code: "WN02", name: "Angel's Estate Chardonnay", desc: "white wines (bottle)", eur: 14.31, bgn: 28.00, weight: "750 ml"},
@@ -382,4 +382,5 @@ window.MENU_EN = {
       ]
     } 
   ]
+
 };
