@@ -3,7 +3,7 @@ window.MENU_BG = {
   "categories": [
     {
       "id": "specialni",
-      "label": "Специални",
+      "label": "СПЕЦИАЛНИ",
       "items": [
         {
           "code": "S01",
@@ -137,7 +137,7 @@ window.MENU_BG = {
     },
     {
       "id": "ribni",
-      "label": "Рибни",
+      "label": "РИБНИ",
       "items": [
         {
           "code": "F01",
@@ -319,7 +319,7 @@ window.MENU_BG = {
     },
     {
       "id": "salads",
-      "label": "Салати",
+      "label": "САЛАТИ",
       "items": [
         {
           "code": "SA01",
@@ -581,7 +581,7 @@ window.MENU_BG = {
     },
     {
       "id": "razqdki",
-      "label": "Разядки",
+      "label": "РАЗЯДКИ",
       "items": [
         {
           "code": "RZ01",
@@ -667,7 +667,7 @@ window.MENU_BG = {
     },
     {
       "id": "predqstiq_bez_meso",
-      "label": "Предястия без месо",
+      "label": "ПРЕДЯСТИЯ БЕЗ МЕСО",
       "items": [
         {
           "code": "PB01",
@@ -873,7 +873,7 @@ window.MENU_BG = {
     },
     {
       "id": "predqstiq_s_meso",
-      "label": "Предястия с месо",
+      "label": "ПРЕДЯСТИЯ С МЕСО",
       "items": [
         {
           "code": "PM01",
@@ -1103,7 +1103,7 @@ window.MENU_BG = {
     },
     {
       "id": "pasta",
-      "label": "Паста и ризото",
+      "label": "ПАСТА И РИЗОТО",
       "items": [
         {
           "code": "PR01",
@@ -1149,7 +1149,7 @@ window.MENU_BG = {
     },
     {
       "id": "osnowni",
-      "label": "Основни",
+      "label": "ОСНОВНИ",
       "items": [
         {
           "code": "M01",
@@ -1307,7 +1307,7 @@ window.MENU_BG = {
     },
     {
       "id": "skara",
-      "label": "Скара",
+      "label": "СКАРА",
       "items": [
         {
           "code": "G01",
@@ -1393,7 +1393,7 @@ window.MENU_BG = {
     },
     {
       "id": "kum_qstiqta",
-      "label": "Към ястията",
+      "label": "КЪМ ЯСТИЯТА",
       "items": [
         {
           "code": "KJ01",
@@ -1583,7 +1583,7 @@ window.MENU_BG = {
     },
     {
       "id": "deserti",
-      "label": "Десерти",
+      "label": "ДЕСЕРТИ",
       "items": [
         {
           "code": "D01",
@@ -1645,7 +1645,7 @@ window.MENU_BG = {
     },
     {
       "id": "bezalkoholni",
-      "label": "Безалкохолни",
+      "label": "БЕЗАЛКОХОЛНИ",
       "items": [
         {
           "code": "BN01",
@@ -1803,7 +1803,7 @@ window.MENU_BG = {
     },
     {
   "id": "alcohol",
-  "label": "Алкохолни",
+  "label": "АЛКОХОЛ",
   "items": [
     { "code": "AN01", "name": "Пещерска обикновена", "desc": "", "weight": "50 мл", "eur": "1.74", "bgn": "3.40" },
     { "code": "AN02", "name": "Пещерска отлежала", "desc": "", "weight": "50 мл", "eur": "1.89", "bgn": "3.70" },
@@ -1862,7 +1862,7 @@ window.MENU_BG = {
 },
     {
       "id": "bira",
-      "label": "Бира",
+      "label": "БИРА",
       "items": [
         {
           "code": "BV01",
@@ -1964,7 +1964,7 @@ window.MENU_BG = {
     },
 	{
       id: "wine",
-      label: "Вино",
+      label: "ВИНО",
       items: [
         {code: "WN01", name: "Ейнджълс Естейт Совиньон Блан", desc: "бели вина (бутилка)", eur: 14.31, bgn: 28.00, weight: "750 мл"},
         {code: "WN02", name: "Ейнджълс Естейт Шардоне", desc: "бели вина (бутилка)", eur: 14.31, bgn: 28.00, weight: "750 мл"},
