@@ -172,7 +172,7 @@ window.MENU_EN = {
     },
 	{
       id: "pasta",
-      label: "Pasta & Risotto",
+      label: "PASTA & RISOTTO",
       items: [
         {code: "PR01", name: "Wild Mushroom Risotto", desc: "risotto with porcini and mixed mushrooms, onion and parmesan", eur: 8.13, bgn: 15.90, weight: "400 g"},
         {code: "PR02", name: "Chicken, Spinach & Blue Cheese Risotto", desc: "risotto with chicken fillet, spinach and blue cheese", eur: 8.13, bgn: 15.90, weight: "400 g"},
@@ -224,7 +224,7 @@ window.MENU_EN = {
     },
 	{
       id: "sides",
-      label: "SIDES & EXTRAS",
+      label: "SIDES & ..",
       items: [
         {code: "KJ01", name: "Tomato & Cucumber Side", desc: "", eur: 2.20, bgn: 4.30, weight: "160 g"},
         {code: "KJ02", name: "Boiled Potatoes with Onion (Side)", desc: "", eur: 2.05, bgn: 4.00, weight: "250 g"},

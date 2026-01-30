@@ -2,7 +2,7 @@ window.MENU_IT = {
   categories: [
     {
       id: "specials",
-      label: "Specialità",
+      label: "SPECIALITÀ",
       items: [
         {code:"S01", name:"Pomodoro invernale", desc:"pomodoro arrosto, katak (crema lattica bulgara), olive, noci, pesto di aglio orsino", eur:7.11, bgn:13.90, weight:"400 g"},
         {code:"S02", name:"Verdure fermentate", desc:"verdure miste tradizionali fermentate (lattico-fermentate)", eur:5.22, bgn:10.20, weight:"300 g"},
@@ -25,7 +25,7 @@ window.MENU_IT = {
 
     {
       id: "fish",
-      label: "Pesce e frutti di mare",
+      label: "PESCE E FRUTTI DI MARE",
       items: [
         {code:"F01", name:"Tarama", desc:"crema classica di uova di pesce con cipolla rossa e pane", eur:5.57, bgn:10.90, weight:"180/100 g"},
         {code:"F02", name:"Insalata di tonno", desc:"lattuga, pomodori, tonno in scatola, mais dolce e limone", eur:7.10, bgn:13.90, weight:"400 g"},
@@ -55,7 +55,7 @@ window.MENU_IT = {
 
     {
       id: "salads",
-      label: "Insalate",
+      label: "INSALATE",
       items: [
         {code:"SA01", name:"Insalata Shopska", desc:"pomodori, cetrioli, formaggio bianco", eur:5.37, bgn:10.50, weight:"400 g"},
         {code:"SA02", name:"Insalata di pomodori", desc:"pomodori freschi", eur:5.01, bgn:9.80, weight:"330 g"},
@@ -94,7 +94,7 @@ window.MENU_IT = {
 
     {
       id: "appetizers",
-      label: "Creme & meze",
+      label: "CREME & MEZE",
       items: [
         {code:"RZ01", name:"Tzatziki", desc:"", eur:5.06, bgn:9.90, weight:"200 g"},
         {code:"RZ02", name:"Tyrokafteri", desc:"crema di formaggio piccante con peperoncino", eur:5.06, bgn:9.90, weight:"150 g"},
@@ -111,7 +111,7 @@ window.MENU_IT = {
 
     {
       id: "starters-veg",
-      label: "Antipasti senza carne",
+      label: "ANTIPASTI SENZA CARNE",
       items: [
         {code:"PB01", name:"Peperoni fritti ripieni di formaggio", desc:"", eur:6.08, bgn:11.90, weight:"2 pcs"},
         {code:"PB02", name:"Peperoni in salsa di pomodoro", desc:"", eur:6.60, bgn:12.90, weight:"400 g"},
@@ -143,7 +143,7 @@ window.MENU_IT = {
 
     {
       id: "starters-meat",
-      label: "Antipasti di carne",
+      label: "ANTIPASTI CARNE",
       items: [
         {code:"PM01", name:"Involtini di cavolo ripieni", desc:"", eur:6.14, bgn:12.60, weight:"250 g"},
         {code:"PM02", name:"Involtini di foglie di vite ripieni", desc:"", eur:6.14, bgn:12.60, weight:"250 g"},
@@ -178,7 +178,7 @@ window.MENU_IT = {
 
     {
       id: "pasta",
-      label: "Pasta e risotti",
+      label: "PASTA E RISOTTO",
       items: [
         {code:"PR01", name:"Risotto ai funghi selvatici", desc:"risotto con porcini e funghi misti, cipolla e parmigiano", eur:8.13, bgn:15.90, weight:"400 g"},
         {code:"PR02", name:"Risotto con pollo, spinaci e formaggio blu", desc:"risotto con filetto di pollo, spinaci e formaggio blu", eur:8.13, bgn:15.90, weight:"400 g"},
@@ -190,7 +190,7 @@ window.MENU_IT = {
 
     {
       id: "mains",
-      label: "Piatti principali",
+      label: "SECONDI",
       items: [
         {code:"M01", name:"Filetto di pollo all’aglio e vino bianco", desc:"filetto di pollo, aglio, vino bianco e patate saltate", eur:7.57, bgn:14.80, weight:"250 g"},
         {code:"M02", name:"Filetto di pollo al forno con pomodori e formaggio", desc:"filetto di pollo, pomodori, formaggio giallo e basilico", eur:7.67, bgn:15.00, weight:"350 g"},
@@ -216,7 +216,7 @@ window.MENU_IT = {
 
     {
       id: "grill",
-      label: "Griglia",
+      label: "GRIGLIA",
       items: [
         {code:"G01", name:"Polpette miste “Retro”", desc:"tre polpette grigliate di maiale, agnello e manzo, servite con patate fritte, insalata di stagione e lutenitsa fatta in casa", eur:8.13, bgn:15.90, weight:"300/250 g"},
         {code:"G02", name:"Pancetta di maiale alla griglia", desc:"fette di pancetta di maiale grigliate, servite con lutenitsa fatta in casa, insalata di stagione e peperoncino piccante", eur:8.08, bgn:15.80, weight:"250/250 g"},
@@ -233,7 +233,7 @@ window.MENU_IT = {
 
     {
       id: "sides",
-      label: "Per accompagnare i piatti",
+      label: "CONTORNI",
       items: [
         {code:"KJ01", name:"Insalata di pomodori e cetrioli (contorno)", desc:"", eur:2.20, bgn:4.30, weight:"160 g"},
         {code:"KJ02", name:"Patate lesse con cipolla (contorno)", desc:"", eur:2.05, bgn:4.00, weight:"250 g"},
@@ -263,7 +263,7 @@ window.MENU_IT = {
 
     {
       id: "desserts",
-      label: "Dolci",
+      label: "DOLCI",
       items: [
         {code:"D01", name:"Gelato", desc:"1 porzione", eur:2.91, bgn:5.70, weight:"150 g"},
         {code:"D02", name:"Gelati artigianali – gusti assortiti", desc:"gelati fatti in casa, gusti assortiti", eur:3.74, bgn:6.60, weight:"150 g"},
@@ -277,7 +277,7 @@ window.MENU_IT = {
 
     {
       id: "soft-drinks",
-      label: "Bevande analcoliche",
+      label: "ANALCOLICI",
       items: [
         {code:"BN01", name:"Coca-Cola", desc:"", eur:2.05, bgn:4.00, weight:"250 ml"},
         {code:"BN02", name:"Fanta", desc:"", eur:2.05, bgn:4.00, weight:"250 ml"},
@@ -303,7 +303,7 @@ window.MENU_IT = {
 
     {
       id: "alcohol",
-      label: "Bevande alcoliche",
+      label: "ALCOLICI",
       items: [
         {code:"AN01", name:"Rakia Peshterska", desc:"", eur:2.56, bgn:5.00, weight:"50 ml"},
         {code:"AN02", name:"Rakia Karnobatska", desc:"", eur:2.56, bgn:5.00, weight:"50 ml"},
@@ -356,7 +356,7 @@ window.MENU_IT = {
 
     {
       id: "beer",
-      label: "Birra",
+      label: "BIRRA",
       items: [
         {code:"BV01", name:"Kamenitza alla spina", desc:"", eur:2.20, bgn:4.30, weight:"330 ml"},
         {code:"BV02", name:"Kamenitza alla spina", desc:"", eur:2.66, bgn:5.20, weight:"500 ml"},
@@ -375,7 +375,7 @@ window.MENU_IT = {
 
     {
       id: "wine",
-      label: "Vino",
+      label: "VINO",
       items: [
         {code:"WN01", name:"Angel’s Estate Sauvignon Blanc", desc:"vini bianchi (bottiglia)", eur:14.31, bgn:28.00, weight:"750 ml"},
         {code:"WN02", name:"Angel’s Estate Chardonnay", desc:"vini bianchi (bottiglia)", eur:14.31, bgn:28.00, weight:"750 ml"},
