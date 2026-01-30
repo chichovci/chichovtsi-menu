@@ -37,6 +37,10 @@ body{
 .flagbtn{width:44px;height:30px;border:1px solid var(--chipBorder);border-radius:10px;background-size:cover;background-position:center;background-repeat:no-repeat;padding:0;cursor:pointer}
 .flagbg{background-image:url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%203%202%27%3E%0A%3Crect%20width%3D%273%27%20height%3D%272%27%20fill%3D%27%23ffffff%27/%3E%0A%3Crect%20width%3D%273%27%20height%3D%271.3333%27%20y%3D%270.6667%27%20fill%3D%27%2300966E%27/%3E%0A%3Crect%20width%3D%273%27%20height%3D%270.6667%27%20y%3D%271.3333%27%20fill%3D%27%23D62612%27/%3E%0A%3C/svg%3E');}
 .flagen{background-image:url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2060%2030%27%3E%0A%3Cpath%20d%3D%27M0%2C0%20v30%20h60%20v-30%20z%27%20fill%3D%27%23012169%27/%3E%0A%3Cpath%20d%3D%27M0%2C0%20L60%2C30%20M60%2C0%20L0%2C30%27%20stroke%3D%27%23ffffff%27%20stroke-width%3D%276%27/%3E%0A%3Cpath%20d%3D%27M0%2C0%20L60%2C30%20M60%2C0%20L0%2C30%27%20stroke%3D%27%23C8102E%27%20stroke-width%3D%274%27/%3E%0A%3Cpath%20d%3D%27M30%2C0%20v30%20M0%2C15%20h60%27%20stroke%3D%27%23ffffff%27%20stroke-width%3D%2710%27/%3E%0A%3Cpath%20d%3D%27M30%2C0%20v30%20M0%2C15%20h60%27%20stroke%3D%27%23C8102E%27%20stroke-width%3D%276%27/%3E%0A%3C/svg%3E');}
+
+/* NEW: Italy flag */
+.flagit{background-image:url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%203%202%27%3E%0A%3Crect%20width%3D%271%27%20height%3D%272%27%20x%3D%270%27%20fill%3D%27%23009246%27/%3E%0A%3Crect%20width%3D%271%27%20height%3D%272%27%20x%3D%271%27%20fill%3D%27%23ffffff%27/%3E%0A%3Crect%20width%3D%271%27%20height%3D%272%27%20x%3D%272%27%20fill%3D%27%23ce2b37%27/%3E%0A%3C/svg%3E');}
+
 .flagemoji{display:none}
 .flagtxt{display:none}
 .tabs{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 12px;overflow:visible}
@@ -59,12 +63,7 @@ body{
   line-height:1.12;
 }
 .code{font-weight:800;font-size:12px;color:var(--muted)}
-.title {
-  font-weight: 700;
-  font-size: 16px;         /* +1px */
-  color: #0f172a;          /* по-тъмно */
-  letter-spacing: -0.01em;
-}
+.title{font-weight:700; font-size:15px}
 .desc{
   color:var(--text);
   font-size:13px;
@@ -207,7 +206,7 @@ body{
 }
 
 .tab {
-  padding: 4px 8px !important;
+  padding: 6px 10px !important;
   font-size: 13px !important;
   line-height: 1.2 !important;
   min-height: unset !important;
@@ -244,10 +243,10 @@ body{
     overflow: hidden !important;
     align-content: flex-start !important;
   }
-  
+
   .tab {
     flex: 0 0 auto !important;
-    padding: 3px 6px !important;
+    padding: 5px 8px !important;
     width: auto !important;
     min-width: auto !important;
     max-width: none !important;
@@ -263,15 +262,15 @@ body{
     gap: 3px !important;
     max-height: 120px !important;
     background: #f9fafb !important;
-    padding: 4px 7px !important;
+    padding: 6px !important;
     border-radius: 8px !important;
     margin-bottom: 16px !important;
     box-shadow: 0 1px 3px rgba(0,0,0,0.05) !important;
   }
-  
+
   .tab {
     flex: 0 0 auto !important;
-    padding: 1px 3px !important;
+    padding: 5px 8px !important;
     font-size: 11px !important;
     line-height: 1.2 !important;
     border-radius: 4px !important;
@@ -280,7 +279,7 @@ body{
     max-width: none !important;
     font-weight: 650 !important;
   }
-  
+
   .tab:not(.active) {
     background: #ffffff !important;
     box-shadow: 0 1px 2px rgba(0,0,0,0.04) !important;
@@ -363,17 +362,6 @@ body{
   font-weight: 800 !important;
   padding: 0 6px !important;
 }
-.modal {
-  max-height: 90vh;
-  display: flex;
-  flex-direction: column;
-}
-
-.modbody {
-  overflow-y: auto;
-  max-height: calc(90vh - 56px);
-}
-
 </style>
 </head>
 <body>
@@ -382,7 +370,9 @@ body{
     <div class="brand">Чичовци</div>
     <div class="flags">
       <button class="flagbtn flagbg" id="lang-bg" title="Български" aria-label="Български"></button>
-      <button class="flagbtn flagen" id="lang-en" title="English (coming soon)" aria-label="English"></button>
+      <button class="flagbtn flagen" id="lang-en" title="English" aria-label="English"></button>
+      <!-- NEW: Italian flag -->
+      <button class="flagbtn flagit" id="lang-it" title="Italiano" aria-label="Italiano"></button>
     </div>
   </div>
 
@@ -401,8 +391,12 @@ body{
     <div class="modbody" id="orderBody"></div>
   </div>
 </div>
+
+<!-- FIX: правилно зареждане на data файловете -->
 <script src="data-bg.js"></script>
 <script src="data-en.js"></script>
+<script src="data-it.js"></script>
+
 <script>
 let currentLang = "bg";
 let data = window.MENU_BG;
@@ -411,10 +405,10 @@ const order = new Map();
 
 function switchLanguage(lang) {
   currentLang = lang;
-  data = lang === "bg" ? window.MENU_BG : window.MENU_EN;
+  data = lang === "bg" ? window.MENU_BG : (lang === "en" ? window.MENU_EN : window.MENU_IT);
   activeCat = data.categories[0]?.id || "";
   render();
-} 
+}
 
 function getActiveCategory(){
   return data.categories.find(c => c.id === activeCat) || data.categories[0];
@@ -491,13 +485,13 @@ function renderList(){
 
     const meta = document.createElement("div");
     meta.className = "meta";
-    
+
     const priceWeight = document.createElement("div");
     priceWeight.style.display = "flex";
     priceWeight.style.gap = "8px";
     priceWeight.style.alignItems = "baseline";
     priceWeight.innerHTML = `<span class="price">€${it.eur} / ${it.bgn} лв</span><span class="weight">${it.weight}</span>`;
-    
+
     meta.appendChild(priceWeight);
     meta.appendChild(actions);
 
@@ -557,7 +551,6 @@ function renderOrder(){
     top.appendChild(ctrl);
 
     row.appendChild(top);
-
     body.appendChild(row);
   });
 }
@@ -580,11 +573,9 @@ document.getElementById("overlay").onclick = (e) => {
 
 document.getElementById("lang-bg").onclick = () => { switchLanguage("bg"); };
 document.getElementById("lang-en").onclick = () => { switchLanguage("en"); };
+document.getElementById("lang-it").onclick = () => { switchLanguage("it"); };
 
 render();
 </script>
 </body>
-
 </html>
-
-
