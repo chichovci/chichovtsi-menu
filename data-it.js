@@ -94,7 +94,7 @@ window.MENU_IT = {
 
     {
       id: "appetizers",
-      label: "CREME & MEZE",
+      label: "CREME E MEZE",
       items: [
         {code:"RZ01", name:"Tzatziki", desc:"", eur:5.06, bgn:9.90, weight:"200 g"},
         {code:"RZ02", name:"Tyrokafteri", desc:"crema di formaggio piccante con peperoncino", eur:5.06, bgn:9.90, weight:"150 g"},
@@ -233,7 +233,7 @@ window.MENU_IT = {
 
     {
       id: "sides",
-      label: "CONTORNI",
+      label: "CONTORNI E ...",
       items: [
         {code:"KJ01", name:"Insalata di pomodori e cetrioli (contorno)", desc:"", eur:2.20, bgn:4.30, weight:"160 g"},
         {code:"KJ02", name:"Patate lesse con cipolla (contorno)", desc:"", eur:2.05, bgn:4.00, weight:"250 g"},
@@ -397,3 +397,4 @@ window.MENU_IT = {
     }
   ]
 };
+
