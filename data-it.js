@@ -25,7 +25,7 @@ window.MENU_IT = {
 
     {
       id: "fish",
-      label: "PESCE E FRUTTI DI MARE",
+      label: "PESCE E MARE",
       items: [
         {code:"F01", name:"Tarama", desc:"crema classica di uova di pesce con cipolla rossa e pane", eur:"5.57", bgn:"10.90", weight:"180/100 g"},
         {code:"F02", name:"Insalata di tonno", desc:"lattuga, pomodori, tonno in scatola, mais dolce e limone", eur:"7.10", bgn:"13.90", weight:"400 g"},
