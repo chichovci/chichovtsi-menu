@@ -38,8 +38,9 @@ body{
 .flagbg{background-image:url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%203%202%27%3E%0A%3Crect%20width%3D%273%27%20height%3D%272%27%20fill%3D%27%23ffffff%27/%3E%0A%3Crect%20width%3D%273%27%20height%3D%271.3333%27%20y%3D%270.6667%27%20fill%3D%27%2300966E%27/%3E%0A%3Crect%20width%3D%273%27%20height%3D%270.6667%27%20y%3D%271.3333%27%20fill%3D%27%23D62612%27/%3E%0A%3C/svg%3E');}
 .flagen{background-image:url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2060%2030%27%3E%0A%3Cpath%20d%3D%27M0%2C0%20v30%20h60%20v-30%20z%27%20fill%3D%27%23012169%27/%3E%0A%3Cpath%20d%3D%27M0%2C0%20L60%2C30%20M60%2C0%20L0%2C30%27%20stroke%3D%27%23ffffff%27%20stroke-width%3D%276%27/%3E%0A%3Cpath%20d%3D%27M0%2C0%20L60%2C30%20M60%2C0%20L0%2C30%27%20stroke%3D%27%23C8102E%27%20stroke-width%3D%274%27/%3E%0A%3Cpath%20d%3D%27M30%2C0%20v30%20M0%2C15%20h60%27%20stroke%3D%27%23ffffff%27%20stroke-width%3D%2710%27/%3E%0A%3Cpath%20d%3D%27M30%2C0%20v30%20M0%2C15%20h60%27%20stroke%3D%27%23C8102E%27%20stroke-width%3D%276%27/%3E%0A%3C/svg%3E');}
 
-/* NEW: Italy flag */
 .flagit{background-image:url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%203%202%27%3E%0A%3Crect%20width%3D%271%27%20height%3D%272%27%20x%3D%270%27%20fill%3D%27%23009246%27/%3E%0A%3Crect%20width%3D%271%27%20height%3D%272%27%20x%3D%271%27%20fill%3D%27%23ffffff%27/%3E%0A%3Crect%20width%3D%271%27%20height%3D%272%27%20x%3D%272%27%20fill%3D%27%23ce2b37%27/%3E%0A%3C/svg%3E');}
+.flagtr{background-image:url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 600'%3E%3Crect width='900' height='600' fill='%23E30A17'/%3E%3Ccircle cx='350' cy='300' r='200' fill='%23ffffff'/%3E%3Ccircle cx='400' cy='300' r='160' fill='%23E30A17'/%3E%3Cpolygon fill='%23ffffff' points='470,300 560,330 530,250 600,200 510,200 470,120 430,200 340,200 410,250 380,330'/%3E%3C/svg%3E");
+} 
 
 .flagemoji{display:none}
 .flagtxt{display:none}
@@ -262,7 +263,7 @@ body{
     gap: 3px !important;
     max-height: 120px !important;
     background: #f9fafb !important;
-    padding: 6px !important;
+    padding: 4px 6px !important;
     border-radius: 8px !important;
     margin-bottom: 16px !important;
     box-shadow: 0 1px 3px rgba(0,0,0,0.05) !important;
@@ -270,7 +271,7 @@ body{
 
   .tab {
     flex: 0 0 auto !important;
-    padding: 3px 5px !important;
+    padding: 5px 8px !important;
     font-size: 11px !important;
     line-height: 1.2 !important;
     border-radius: 4px !important;
@@ -373,7 +374,9 @@ body{
       <button class="flagbtn flagen" id="lang-en" title="English" aria-label="English"></button>
       <!-- NEW: Italian flag -->
       <button class="flagbtn flagit" id="lang-it" title="Italiano" aria-label="Italiano"></button>
-    </div>
+      <button class="flagbtn flagtr" id="lang-tr" title="Türkçe" aria-label="Türkçe"></button>
+
+	</div>
   </div>
 
   <div class="tabs" id="tabs"></div>
@@ -396,7 +399,7 @@ body{
 <script src="data-bg.js"></script>
 <script src="data-en.js"></script>
 <script src="data-it.js"></script>
-
+<script src="data-tr.js"></script>
 <script>
 let currentLang = "bg";
 let data = window.MENU_BG;
@@ -405,10 +408,17 @@ const order = new Map();
 
 function switchLanguage(lang) {
   currentLang = lang;
-  data = lang === "bg" ? window.MENU_BG : (lang === "en" ? window.MENU_EN : window.MENU_IT);
+  data =
+    lang === "bg" ? window.MENU_BG :
+    lang === "en" ? window.MENU_EN :
+    lang === "it" ? window.MENU_IT :
+    lang === "tr" ? window.MENU_TR :
+    window.MENU_BG; // safe fallback
+
   activeCat = data.categories[0]?.id || "";
   render();
 }
+
 
 function getActiveCategory(){
   return data.categories.find(c => c.id === activeCat) || data.categories[0];
@@ -574,14 +584,10 @@ document.getElementById("overlay").onclick = (e) => {
 document.getElementById("lang-bg").onclick = () => { switchLanguage("bg"); };
 document.getElementById("lang-en").onclick = () => { switchLanguage("en"); };
 document.getElementById("lang-it").onclick = () => { switchLanguage("it"); };
+document.getElementById("lang-tr").onclick = () => { switchLanguage("tr"); };
+
 
 render();
 </script>
 </body>
 </html>
-
-
-
-
-
-
