@@ -5,7 +5,7 @@ window.MENU_IT = {
       label: "SPECIALITÀ",
       items: [
         {code:"S01", name:"Pomodoro invernale", desc:"pomodoro arrosto, katak (crema lattica bulgara), olive, noci, pesto di aglio orsino", eur:"7.11", bgn:"13.90", weight:"400 g"},
-        {code:"S02", name:"Verdure fermentate miste", desc:"verdure miste tradizionali fermentate (lattico-fermentate)", eur:"5.22", bgn:"10.20", weight:"300 g"},
+        {code:"S02", name:"Verdure fermentate", desc:"verdure miste tradizionali fermentate (lattico-fermentate)", eur:"5.22", bgn:"10.20", weight:"300 g"},
         {code:"S03", name:"Paprika u Pavlak", desc:"crema serba piccante con peperoncino fresco e panna acida", eur:"5.06", bgn:"9.90", weight:"200 g"},
         {code:"S04", name:"Kyopolou con bruschetta e noci", desc:"crema tradizionale di melanzane e peperoni arrostiti, servita con bruschetta", eur:"5.06", bgn:"9.90", weight:"250 g"},
         {code:"S05", name:"Bruschetta con lardo Iberico e pomodorini", desc:"pane tostato con lardo Iberico stagionato e pomodorini", eur:"6.08", bgn:"11.90", weight:"250 g"},
@@ -13,7 +13,7 @@ window.MENU_IT = {
         {code:"S07", name:"Involtini di cavolo ripieni", desc:"involtini di crauti ripieni di carne macinata e riso", eur:"6.44", bgn:"12.60", weight:"250 g"},
         {code:"S08", name:"Sudzhuk fatto in casa con verdure fermentate", desc:"sudzhuk fresco fatto in casa alla griglia, servito con verdure fermentate", eur:"9.00", bgn:"17.60", weight:"450 g"},
         {code:"S09", name:"Polpette miste “Retro”", desc:"tre polpette di maiale, agnello e manzo, lutenitsa fatta in casa, verdure fermentate e patate fritte", eur:"8.13", bgn:"15.90", weight:"450 g"},
-        {code:"S10", name:"Pancia di maiale alla griglia", desc:"pancetta di maiale alla griglia, lutenitsa fatta in casa, verdure fermentate e peperoncino piccante", eur:"8.08", bgn:"15.80", weight:"400 g"},
+        {code:"S10", name:"Pancetta di maiale alla griglia", desc:"pancetta di maiale alla griglia, lutenitsa fatta in casa, verdure fermentate e peperoncino piccante", eur:"8.08", bgn:"15.80", weight:"400 g"},
         {code:"S11", name:"Kachamak con uovo, sudzhuk e formaggio", desc:"polenta tradizionale con uovo, sudzhuk e formaggio bianco", eur:"7.11", bgn:"13.90", weight:"450 g"},
         {code:"S12", name:"Orecchie di maiale alla griglia", desc:"orecchie di maiale alla griglia", eur:"7.06", bgn:"13.80", weight:"250 g"},
         {code:"S13", name:"Stinco di maiale con zampetto", desc:"stinco e zampetto di maiale a lenta cottura, cipolle caramellate e fagioli", eur:"8.64", bgn:"16.90", weight:"350 g"},
@@ -210,7 +210,7 @@ window.MENU_IT = {
         {code:"M16", name:"Filetto di maiale con funghi", desc:"", eur:"7.93", bgn:"15.50", weight:"350 g"},
         {code:"M17", name:"Maiale con cipolla e spezie", desc:"collo di maiale saltato con cipolla, spezie e peperoncino piccante", eur:"7.62", bgn:"14.90", weight:"350 g"},
         {code:"M18", name:"Bistecca di collo di maiale con verdure saltate", desc:"collo di maiale con zucchine, melanzane, funghi e peperoni", eur:"8.13", bgn:"15.90", weight:"450 g"},
-        {code:"M19", name:"Pancia di maiale arrosto a lenta cottura", desc:"pancetta arrosto con patate rustiche e insalata", eur:"11.20", bgn:"21.90", weight:"450 g"}
+        {code:"M19", name:"Pancetta di maiale arrosto a lenta cottura", desc:"pancetta arrosto con patate rustiche e insalata", eur:"11.20", bgn:"21.90", weight:"450 g"}
       ]
     },
 
@@ -219,7 +219,7 @@ window.MENU_IT = {
       label: "GRIGLIA",
       items: [
         {code:"G01", name:"Polpette miste “Retro”", desc:"tre polpette grigliate di maiale, agnello e manzo, servite con patate fritte, insalata di stagione e lutenitsa fatta in casa", eur:"8.13", bgn:"15.90", weight:"300/250 g"},
-        {code:"G02", name:"Pancia di maiale alla griglia", desc:"fette di pancetta di maiale grigliate, servite con lutenitsa fatta in casa, insalata di stagione e peperoncino piccante", eur:"8.08", bgn:"15.80", weight:"250/250 g"},
+        {code:"G02", name:"Pancetta di maiale alla griglia", desc:"fette di pancetta di maiale grigliate, servite con lutenitsa fatta in casa, insalata di stagione e peperoncino piccante", eur:"8.08", bgn:"15.80", weight:"250/250 g"},
         {code:"G03", name:"Filetto o coscia di pollo alla griglia", desc:"filetto di pollo (petto) oppure bistecca di pollo (coscia)", eur:"7.06", bgn:"13.80", weight:"220/250 g"},
         {code:"G04", name:"Spiedini di polpette di manzo Black Angus", desc:"due spiedini, insalata fresca, patate rustiche e salsa chimichurri", eur:"8.64", bgn:"16.90", weight:"240/200 g"},
         {code:"G05", name:"Ali di pollo alla griglia", desc:"", eur:"6.90", bgn:"13.50", weight:"350 g"},
@@ -397,4 +397,3 @@ window.MENU_IT = {
     }
   ]
 };
-

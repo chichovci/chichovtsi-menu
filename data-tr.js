@@ -6,7 +6,7 @@ window.MENU_TR = {
       label: "SPESİYALLER",
       items: [
         {code:"S01", name:"Kış domatesi", desc:"fırınlanmış domates, katak (Bulgar süt ürünü), zeytin, ceviz, yabani sarımsak pestosu", eur:"7.11", bgn:"13.90", weight:"400 g"},
-        {code:"S02", name:"Karışık mevsim turşusu", desc:"geleneksel lakto-fermente karışık sebzeler", eur:"5.22", bgn:"10.20", weight:"300 g"},
+        {code:"S02", name:"Fermente sebzeler", desc:"geleneksel lakto-fermente karışık sebzeler", eur:"5.22", bgn:"10.20", weight:"300 g"},
         {code:"S03", name:"Paprika u pavlak", desc:"çiğ acı biber ve ekşi krema ile yapılan, acılı Sırp usulü meze", eur:"5.06", bgn:"9.90", weight:"200 g"},
         {code:"S04", name:"Bruschetta ve cevizli köpoğlu", desc:"geleneksel fırınlanmış patlıcan ve biber mezesi, bruschetta ile servis edilir", eur:"5.06", bgn:"9.90", weight:"250 g"},
         {code:"S05", name:"Iberico lardo ve cherry domatesli bruschetta", desc:"kavrulmuş ekmek üzerinde olgunlaştırılmış Iberico lardo ve cherry domates", eur:"6.08", bgn:"11.90", weight:"250 g"},
@@ -399,4 +399,3 @@ window.MENU_TR = {
     }
   ]
 };
-

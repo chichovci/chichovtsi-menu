@@ -40,6 +40,7 @@ body{
 
 .flagit{background-image:url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"%3E%3Crect width="1" height="2" x="0" fill="%23009246"/%3E%3Crect width="1" height="2" x="1" fill="%23ffffff"/%3E%3Crect width="1" height="2" x="2" fill="%23ce2b37"/%3E%3C/svg%3E');}
 .flagtr{background-image:url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 600'%3E%3Crect width='900' height='600' fill='%23E30A17'/%3E%3Ccircle cx='350' cy='300' r='200' fill='%23ffffff'/%3E%3Ccircle cx='400' cy='300' r='160' fill='%23E30A17'/%3E%3Cpolygon fill='%23ffffff' points='470,300 560,330 530,250 600,200 510,200 470,120 430,200 340,200 410,250 380,330'/%3E%3C/svg%3E");}  
+.flagru{background-image:url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3Crect width='3' height='2' fill='%23ffffff'/%3E%3Crect width='3' height='0.6667' y='0.6667' fill='%230039A6'/%3E%3Crect width='3' height='0.6667' y='1.3333' fill='%23D52B1E'/%3E%3C/svg%3E");}
 
 .flagemoji{display:none}
 .flagtxt{display:none}
@@ -196,6 +197,9 @@ body{
       <button class="flagbtn flagen" id="lang-en" title="English (coming soon)" aria-label="English"></button>
 	  <button class="flagbtn flagit" id="lang-it" title="Italiano" aria-label="Italiano"></button>
 	  <button class="flagbtn flagtr" id="lang-tr" title="Türkçe" aria-label="Türkçe"></button>
+	  <button class="flagbtn flagru" id="lang-ru" title="Русский" aria-label="Русский"></button>
+
+
     </div>
   </div>
 
@@ -207,6 +211,8 @@ body{
 <script src="data-en.js"></script>
 <script src="data-it.js"></script>
 <script src="data-tr.js"></script>
+<script src="data-ru.js"></script>
+
 <script>
 let currentLang = "bg";
 let data = window.MENU_BG;
@@ -220,6 +226,7 @@ function switchLanguage(lang) {
     lang === "en" ? window.MENU_EN :
     lang === "it" ? window.MENU_IT :
     lang === "tr" ? window.MENU_TR :
+	lang === "ru" ? window.MENU_RU :
     window.MENU_BG; // safe fallback
 
   activeCat = data.categories[0]?.id || "";
@@ -289,6 +296,8 @@ document.getElementById("lang-bg").onclick = () => { switchLanguage("bg"); };
 document.getElementById("lang-en").onclick = () => { switchLanguage("en"); };
 document.getElementById("lang-it").onclick = () => switchLanguage("it");
 document.getElementById("lang-tr").onclick = () => { switchLanguage("tr"); };
+document.getElementById("lang-ru").onclick = () => { switchLanguage("ru"); };
+
 
 render();
 </script>
