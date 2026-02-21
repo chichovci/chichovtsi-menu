@@ -161,7 +161,9 @@ body{
   max-width:520px;
   background:#fff;
   border-radius:16px;
-  overflow:hidden;
+  max-height:85vh;          /* лимитира височината */
+  display:flex;             /* позволява вътрешно разпределение */
+  flex-direction:column;
 }
 .modalhead{
   padding:14px 16px;
@@ -180,9 +182,14 @@ body{
   font-weight:800;
   cursor:pointer;
 }
-.modbody{padding:8px 16px 16px}
+.modbody{
+  padding:12px 16px 16px;      /* малко повече */
+  overflow:auto;
+  -webkit-overflow-scrolling:touch;
+  flex:1;
+}
 .row{
-  padding:10px 0;
+  padding:12px 0;              /* беше 10px – малко повече */
   border-bottom:1px solid var(--line);
 }
 .row:last-child{border-bottom:0}
@@ -190,7 +197,7 @@ body{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  gap:10px;
+  gap:14px;
 }
 .rowname{font-weight:900}
 .rowbg{margin-top:4px; color:var(--muted); font-weight:700; font-size:12px}
