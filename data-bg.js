@@ -1,4 +1,10 @@
 window.MENU_BG = {
+	ui: {
+  showOrder: "Покажи поръчка",
+  orderTitle: "Поръчка (за сервитьора)",
+  close: "Затвори",
+  emptyOrder: "Няма избрани артикули."
+},
   "lang": "bg",
   "categories": [
     {

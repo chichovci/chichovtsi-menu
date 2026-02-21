@@ -1,4 +1,10 @@
 window.MENU_EN = {
+	ui: {
+  showOrder: "Show order",
+  orderTitle: "Order (for the waiter)",
+  close: "Close",
+  emptyOrder: "No items selected."
+},
   categories: [
   {
       id: "specials",

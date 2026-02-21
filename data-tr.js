@@ -1,5 +1,11 @@
 // data-tr.js
 window.MENU_TR = {
+	ui: {
+  showOrder: "Siparişi göster",
+  orderTitle: "Sipariş (garson için)",
+  close: "Kapat",
+  emptyOrder: "Seçili ürün yok."
+},
   categories: [
     {
       id: "specials",

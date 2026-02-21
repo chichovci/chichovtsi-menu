@@ -1,4 +1,10 @@
 window.MENU_ES = {
+	ui: {
+  showOrder: "MOSTRAR PEDIDO",
+  orderTitle: "Pedido (para el camarero)",
+  close: "Cerrar",
+  emptyOrder: "No hay artículos seleccionados."
+},
   currency: "lv",
   categories: [
 {

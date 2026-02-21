@@ -1,4 +1,9 @@
 window.MENU_EL = {
+	ui: {
+  showOrder: "Δείξτε παραγγελία",
+  orderTitle: "Παραγγελία (για τον σερβιτόρο)",
+  close: "Κλείσιμο"
+},
   currency: "lv",
   categories: [
 {

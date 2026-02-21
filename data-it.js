@@ -1,4 +1,10 @@
 window.MENU_IT = {
+	ui: {
+  showOrder: "Mostra ordine",
+  orderTitle: "Ordine (per il cameriere)",
+  close: "Chiudi",
+  emptyOrder: "Nessun articolo selezionato."
+},
   categories: [
     {
       id: "specials",

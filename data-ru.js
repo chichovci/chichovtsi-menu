@@ -1,4 +1,10 @@
 window.MENU_RU = {
+	ui: {
+  showOrder: "Показать заказ",
+  orderTitle: "Заказ (для официанта)",
+  close: "Закрыть",
+  emptyOrder: "Нет выбранных позиций."
+},
   categories: [
     {
       id: "specials",
