@@ -605,7 +605,7 @@ function renderOrder(){
       const bgName = getBgNameByCode(it.code);
       if(bgName){
         const bgLine = document.createElement("div");
-        bgLine.className = "order-bg-name";
+        bgLine.className = "rowbg";
         bgLine.textContent = `(${bgName})`;
         name.appendChild(bgLine);
       }
@@ -638,6 +638,48 @@ function renderOrder(){
     row.appendChild(top);
     body.appendChild(row);
   });
+  const distinct = order.size;
+let totalQty = 0;
+for (const qty of order.values()) totalQty += qty;
+
+const titleEl = document.getElementById("orderTitle");
+if (titleEl) {
+  const base = ((data && data.ui && data.ui.orderTitle) ? data.ui.orderTitle : "Поръчка (за сервитьора)");
+  titleEl.textContent = `${base} · ${distinct} / ${totalQty}`;
+}
+}
+function updateOrderTitleCount(){
+  const titleEl = document.getElementById("orderTitle");
+  if(!titleEl) return;
+
+  const ui = (data && data.ui) ? data.ui : {};
+  const base = ui.orderTitle || "Поръчка (за сервитьора)";
+
+  const body = document.getElementById("orderBody"); // .modbody
+  const rows = body ? body.querySelectorAll(".row") : null;
+
+  const totalRows = order.size;
+
+  if(!body || !rows || totalRows === 0){
+    titleEl.textContent = base;
+    return;
+  }
+
+  const bodyRect = body.getBoundingClientRect();
+  const viewBottom = bodyRect.bottom;   // долният ръб на видимата зона
+
+  let shown = 0;
+  for(const r of rows){
+    const rRect = r.getBoundingClientRect();
+    if(rRect.bottom <= viewBottom + 0.5) shown++;  // + малък толеранс
+    else break;
+  }
+
+  if(shown < 1 && rows.length) shown = 1;
+
+  const hasMore = body.scrollHeight > body.clientHeight + 1;
+
+  titleEl.textContent = `${base} · ${shown}/${totalRows}${hasMore ? " ↓" : ""}`;
 }
 
 function applyUiStrings(){
@@ -653,14 +695,19 @@ function render(){
   renderList();
   renderOrder();
   applyUiStrings(); // ✅ важно: след като data е избран/сменен
+  updateOrderTitleCount();
 }
 
 document.getElementById("openOrder").onclick = () => {
   document.getElementById("overlay").style.display = "flex";
+  requestAnimationFrame(updateOrderTitleCount);
 };
 document.getElementById("closeOrder").onclick = () => {
   document.getElementById("overlay").style.display = "none";
 };
+document.getElementById("orderBody").addEventListener("scroll", () => {
+  updateOrderTitleCount();
+});
 document.getElementById("overlay").onclick = (e) => {
   if(e.target.id==="overlay") document.getElementById("overlay").style.display = "none";
 };
